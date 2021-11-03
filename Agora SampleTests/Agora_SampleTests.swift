@@ -8,6 +8,7 @@
 import XCTest
 @testable import Agora_Sample
 
+// swiftlint:disable:next type_name
 class Agora_SampleTests: XCTestCase {
 
     override func setUpWithError() throws {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+// swiftlint:disable:next type_name
 struct Agora_SampleApp: App {
     var body: some Scene {
         WindowGroup {

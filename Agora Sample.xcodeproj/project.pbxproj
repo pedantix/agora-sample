@@ -15,6 +15,7 @@
 		28B4F1B72732C87A009377AB /* Agora_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1B62732C87A009377AB /* Agora_SampleUITests.swift */; };
 		28B4F1B92732C87A009377AB /* Agora_SampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1B82732C87A009377AB /* Agora_SampleUITestsLaunchTests.swift */; };
 		28B4F1C72732C976009377AB /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 28B4F1C62732C976009377AB /* AgoraRtcKit */; };
+		28B4F1C92732CC40009377AB /* AgoraAVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1C82732CC40009377AB /* AgoraAVView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		28B4F1B22732C87A009377AB /* Agora SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Agora SampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4F1B62732C87A009377AB /* Agora_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agora_SampleUITests.swift; sourceTree = "<group>"; };
 		28B4F1B82732C87A009377AB /* Agora_SampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agora_SampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		28B4F1C82732CC40009377AB /* AgoraAVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraAVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				28B4F19D2732C878009377AB /* ContentView.swift */,
 				28B4F19F2732C87A009377AB /* Assets.xcassets */,
 				28B4F1A12732C87A009377AB /* Preview Content */,
+				28B4F1C82732CC40009377AB /* AgoraAVView.swift */,
 			);
 			path = "Agora Sample";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28B4F1BC2732C87A009377AB /* Build configuration list for PBXNativeTarget "Agora Sample" */;
 			buildPhases = (
+				28B4F1CA2732DBAE009377AB /* SwiftLint */,
 				28B4F1942732C878009377AB /* Sources */,
 				28B4F1952732C878009377AB /* Frameworks */,
 				28B4F1962732C878009377AB /* Resources */,
@@ -260,12 +264,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B4F1CA2732DBAE009377AB /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Style is important for readable code\n\nif test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28B4F1942732C878009377AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28B4F19E2732C878009377AB /* ContentView.swift in Sources */,
+				28B4F1C92732CC40009377AB /* AgoraAVView.swift in Sources */,
 				28B4F19C2732C878009377AB /* Agora_SampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,6 +456,8 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use the microphone to send video via the Agora RTC package";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app will use the microphone to send audio via the Agora RTC package";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -460,6 +488,8 @@
 				DEVELOPMENT_TEAM = AZ59WCD7SF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app will use the microphone to send video via the Agora RTC package";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app will use the microphone to send audio via the Agora RTC package";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
