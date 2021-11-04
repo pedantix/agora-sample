@@ -7,14 +7,21 @@
 
 import SwiftUI
 
-// TODO: Add activity indicator for login
 struct LoginView: View {
-
     @EnvironmentObject private var messenger: AgoraRTMMessenger
     @State private var username = ""
     @FocusState private var usernameIsFocused: Bool
 
     var body: some View {
+        ZStack {
+            loginForm
+            if messenger.isLoggingIn {
+                ProgressView()
+            }
+        }
+    }
+
+    private var loginForm: some View {
         VStack {
             Spacer()
             VStack {

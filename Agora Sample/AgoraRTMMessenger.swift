@@ -17,6 +17,7 @@ class AgoraRTMMessenger: NSObject, ObservableObject {
         return kit
     }()
 
+    @Published var isLoggingIn = false
     @Published var loggedIn = false
     @Published var lastLoginError: String?
     @Published var messages = [String]()
@@ -37,12 +38,21 @@ class AgoraRTMMessenger: NSObject, ObservableObject {
 // MARK: - Public  API
 extension AgoraRTMMessenger {
     func login(as username: String) {
+        isLoggingIn = true
         agoraRTMKit.login(byToken: AgoraConfig.sampleAppIDRTM,
                           user: username) { [unowned self] agoraRtmLoginErrorCode in
+            defer {
+                DispatchQueue.main.async {
+                    isLoggingIn = false
+                }
+
+            }
             if agoraRtmLoginErrorCode == .ok {
-                self.loggedIn = true
-                self.channel = agoraRTMKit.createChannel(withId: AgoraConfig.testingChannel, delegate: self)
-                self.channel?.join(completion: { err in
+                DispatchQueue.main.async {
+                    loggedIn = true
+                }
+                channel = agoraRTMKit.createChannel(withId: AgoraConfig.testingChannel, delegate: self)
+                channel?.join(completion: { err in
                     if err == .channelErrorOk {
                         self.username = username
                         addMessage(for: username, text: "Joined")

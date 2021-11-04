@@ -24,7 +24,6 @@ struct MessengerView: View {
         }
     }
 
-    @ViewBuilder
     private var messagesView: some View {
         VStack {
             Text("Chat").font(.title2)
