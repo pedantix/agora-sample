@@ -10,9 +10,11 @@ import SwiftUI
 @main
 // swiftlint:disable:next type_name
 struct Agora_SampleApp: App {
+    @StateObject var messenger = AgoraRTMMessenger()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView().environmentObject(messenger)
         }
     }
 }

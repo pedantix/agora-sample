@@ -7,14 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AppView: View {
+    @EnvironmentObject var messenger: AgoraRTMMessenger
+
     var body: some View {
-        AgoraAVView()
+        if !messenger.loggedIn {
+            LoginView()
+        } else {
+            ChatView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AppView()
     }
 }

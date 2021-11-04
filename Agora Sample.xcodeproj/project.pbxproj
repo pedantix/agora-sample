@@ -8,20 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		28B4F19C2732C878009377AB /* Agora_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F19B2732C878009377AB /* Agora_SampleApp.swift */; };
-		28B4F19E2732C878009377AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F19D2732C878009377AB /* ContentView.swift */; };
+		28B4F19E2732C878009377AB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F19D2732C878009377AB /* AppView.swift */; };
 		28B4F1A02732C87A009377AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B4F19F2732C87A009377AB /* Assets.xcassets */; };
 		28B4F1A32732C87A009377AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B4F1A22732C87A009377AB /* Preview Assets.xcassets */; };
 		28B4F1C72732C976009377AB /* AgoraRtcKit in Frameworks */ = {isa = PBXBuildFile; productRef = 28B4F1C62732C976009377AB /* AgoraRtcKit */; };
 		28B4F1C92732CC40009377AB /* AgoraAVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1C82732CC40009377AB /* AgoraAVView.swift */; };
+		28B4F1F32734128D009377AB /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 28B4F1F22734128D009377AB /* AgoraRtmKit */; };
+		28B4F1F52734134A009377AB /* AgoraRTMMessenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1F42734134A009377AB /* AgoraRTMMessenger.swift */; };
+		28B4F1F7273413FB009377AB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1F6273413FB009377AB /* LoginView.swift */; };
+		28B4F1F927341BAF009377AB /* AgoraConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1F827341BAF009377AB /* AgoraConfig.swift */; };
+		28B4F1FB2734400E009377AB /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1FA2734400E009377AB /* ChatView.swift */; };
+		28B4F1FD27344280009377AB /* MessengerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F1FC27344280009377AB /* MessengerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28B4F1982732C878009377AB /* Agora Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4F19B2732C878009377AB /* Agora_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agora_SampleApp.swift; sourceTree = "<group>"; };
-		28B4F19D2732C878009377AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		28B4F19D2732C878009377AB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		28B4F19F2732C87A009377AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28B4F1A22732C87A009377AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		28B4F1C82732CC40009377AB /* AgoraAVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraAVView.swift; sourceTree = "<group>"; };
+		28B4F1F42734134A009377AB /* AgoraRTMMessenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraRTMMessenger.swift; sourceTree = "<group>"; };
+		28B4F1F6273413FB009377AB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		28B4F1F827341BAF009377AB /* AgoraConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraConfig.swift; sourceTree = "<group>"; };
+		28B4F1FA2734400E009377AB /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		28B4F1FC27344280009377AB /* MessengerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B4F1F32734128D009377AB /* AgoraRtmKit in Frameworks */,
 				28B4F1C72732C976009377AB /* AgoraRtcKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,10 +68,15 @@
 			isa = PBXGroup;
 			children = (
 				28B4F19B2732C878009377AB /* Agora_SampleApp.swift */,
-				28B4F19D2732C878009377AB /* ContentView.swift */,
+				28B4F1C82732CC40009377AB /* AgoraAVView.swift */,
+				28B4F19D2732C878009377AB /* AppView.swift */,
+				28B4F1F6273413FB009377AB /* LoginView.swift */,
 				28B4F19F2732C87A009377AB /* Assets.xcassets */,
 				28B4F1A12732C87A009377AB /* Preview Content */,
-				28B4F1C82732CC40009377AB /* AgoraAVView.swift */,
+				28B4F1F42734134A009377AB /* AgoraRTMMessenger.swift */,
+				28B4F1F827341BAF009377AB /* AgoraConfig.swift */,
+				28B4F1FA2734400E009377AB /* ChatView.swift */,
+				28B4F1FC27344280009377AB /* MessengerView.swift */,
 			);
 			path = "Agora Sample";
 			sourceTree = "<group>";
@@ -91,6 +108,7 @@
 			name = "Agora Sample";
 			packageProductDependencies = (
 				28B4F1C62732C976009377AB /* AgoraRtcKit */,
+				28B4F1F22734128D009377AB /* AgoraRtmKit */,
 			);
 			productName = "Agora Sample";
 			productReference = 28B4F1982732C878009377AB /* Agora Sample.app */;
@@ -122,6 +140,7 @@
 			mainGroup = 28B4F18F2732C877009377AB;
 			packageReferences = (
 				28B4F1C52732C976009377AB /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+				28B4F1F12734128C009377AB /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */,
 			);
 			productRefGroup = 28B4F1992732C878009377AB /* Products */;
 			projectDirPath = "";
@@ -170,8 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B4F19E2732C878009377AB /* ContentView.swift in Sources */,
+				28B4F1F52734134A009377AB /* AgoraRTMMessenger.swift in Sources */,
+				28B4F19E2732C878009377AB /* AppView.swift in Sources */,
+				28B4F1FD27344280009377AB /* MessengerView.swift in Sources */,
+				28B4F1F927341BAF009377AB /* AgoraConfig.swift in Sources */,
 				28B4F1C92732CC40009377AB /* AgoraAVView.swift in Sources */,
+				28B4F1FB2734400E009377AB /* ChatView.swift in Sources */,
+				28B4F1F7273413FB009377AB /* LoginView.swift in Sources */,
 				28B4F19C2732C878009377AB /* Agora_SampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +415,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		28B4F1F12734128C009377AB /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtm_iOS";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -398,6 +430,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 28B4F1C52732C976009377AB /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
 			productName = AgoraRtcKit;
+		};
+		28B4F1F22734128D009377AB /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28B4F1F12734128C009377AB /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */;
+			productName = AgoraRtmKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
