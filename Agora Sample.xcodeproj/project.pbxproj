@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		289A76872742CEBF004EDBF6 /* StatsMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289A76862742CEBF004EDBF6 /* StatsMonitor.swift */; };
+		289A768A2742CEF7004EDBF6 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 289A76892742CEF7004EDBF6 /* DequeModule */; };
 		28B4F19C2732C878009377AB /* Agora_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F19B2732C878009377AB /* Agora_SampleApp.swift */; };
 		28B4F19E2732C878009377AB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4F19D2732C878009377AB /* AppView.swift */; };
 		28B4F1A02732C87A009377AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B4F19F2732C87A009377AB /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289A76862742CEBF004EDBF6 /* StatsMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsMonitor.swift; sourceTree = "<group>"; };
 		28B4F1982732C878009377AB /* Agora Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4F19B2732C878009377AB /* Agora_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agora_SampleApp.swift; sourceTree = "<group>"; };
 		28B4F19D2732C878009377AB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 			files = (
 				28B4F1F32734128D009377AB /* AgoraRtmKit in Frameworks */,
 				28B4F1C72732C976009377AB /* AgoraRtcKit in Frameworks */,
+				289A768A2742CEF7004EDBF6 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 				28B4F1F827341BAF009377AB /* AgoraConfig.swift */,
 				28B4F1FA2734400E009377AB /* ChatView.swift */,
 				28B4F1FC27344280009377AB /* MessengerView.swift */,
+				289A76862742CEBF004EDBF6 /* StatsMonitor.swift */,
 			);
 			path = "Agora Sample";
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			packageProductDependencies = (
 				28B4F1C62732C976009377AB /* AgoraRtcKit */,
 				28B4F1F22734128D009377AB /* AgoraRtmKit */,
+				289A76892742CEF7004EDBF6 /* DequeModule */,
 			);
 			productName = "Agora Sample";
 			productReference = 28B4F1982732C878009377AB /* Agora Sample.app */;
@@ -141,6 +147,7 @@
 			packageReferences = (
 				28B4F1C52732C976009377AB /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
 				28B4F1F12734128C009377AB /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */,
+				289A76882742CEF7004EDBF6 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 28B4F1992732C878009377AB /* Products */;
 			projectDirPath = "";
@@ -190,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28B4F1F52734134A009377AB /* AgoraRTMMessenger.swift in Sources */,
+				289A76872742CEBF004EDBF6 /* StatsMonitor.swift in Sources */,
 				28B4F19E2732C878009377AB /* AppView.swift in Sources */,
 				28B4F1FD27344280009377AB /* MessengerView.swift in Sources */,
 				28B4F1F927341BAF009377AB /* AgoraConfig.swift in Sources */,
@@ -407,6 +415,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		289A76882742CEF7004EDBF6 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		28B4F1C52732C976009377AB /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS";
@@ -426,6 +442,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		289A76892742CEF7004EDBF6 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 289A76882742CEF7004EDBF6 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
 		28B4F1C62732C976009377AB /* AgoraRtcKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 28B4F1C52732C976009377AB /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
